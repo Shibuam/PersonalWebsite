@@ -358,11 +358,13 @@
                   <label for="name">Your Name</label>  
                <input type="text" name="name" class="form-control">
                 </div>
+                <div class="form-group col-md-6">
                 <label for="name">Your Email</label>
                 <input type="email" class="form-control" name="email" id="email">
+                </div>
                 <div class="form-group">
-                  <label for="name">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject" >
+                  <label for="name">Phone Number</label>
+                  <input type="text" class="form-control" name="PhoneNumber" id="subject" >
                 </div>
                 <div class="form-group">
                   <label for="name">Message</label>
@@ -465,7 +467,7 @@
       success:function (response){
         alert("Form submitted successfully")
         window.location.reload()
-        //window.location.href="https://google.com"
+       
     },
   
     error:function (err){
@@ -500,7 +502,7 @@ $("#submit-form").validate({
               }, 
               message:{ 
                required:true,
-               minlength:40
+               minlength:10
        }  
       }
       })
@@ -516,7 +518,8 @@ $("#submit-form").validate({
                 rules:{
                     name:{
                         required:true,
-                        minlength:4
+                        minlength:4,
+                        Text:true
                     },
                     email:{
                         required:true,
